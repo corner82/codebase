@@ -11,15 +11,8 @@ return array(
         'Application',
         'Admin',
         'Login',
-        'SFDM',
         'SanalFabrika',
-        'Companies',
         'Error',
-        'Supervisor',
-        'Definitions',
-        'Signup',
-        'Cluster',
-//        'Uretimosb'
     ),
     
     // These are various options for the listeners attached to the ModuleManager
