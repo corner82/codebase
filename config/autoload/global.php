@@ -23,7 +23,7 @@ return array(
        
        
        'Signup' => 'layout/signup.phtml',
-       'Cluster' => 'layout/cluster.phtml',
+       
 //       'Uretimosb' => 'layout/uretimosb.phtml'
    ),
     'action_layouts' => array(
