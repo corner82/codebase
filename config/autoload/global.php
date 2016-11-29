@@ -21,7 +21,7 @@ return array(
        
        'Error' => 'layout/error.phtml',
        
-       'Supervisor' => 'layout/supervisor.phtml',
+       
        'Signup' => 'layout/signup.phtml',
        'Cluster' => 'layout/cluster.phtml',
 //       'Uretimosb' => 'layout/uretimosb.phtml'
