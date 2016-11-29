@@ -16,48 +16,10 @@ return array(
        'Application' => 'layout/layout.phtml',
        'Admin' => 'layout/admin.phtml',      
        'Login' => 'layout/login.phtml',
-       
        'Sanalfabrika' => 'layout/sanalfabrika.phtml',
-       
        'Error' => 'layout/error.phtml',
-       
-       
-       
-       
-//       'Uretimosb' => 'layout/uretimosb.phtml'
    ),
     'action_layouts' => array(
-        'SFDM' => array(
-            'acldefinition' => 'layout/acldefinitionLayout.phtml',
-            'profile' => 'layout/profile.phtml',
-            'confirm' => 'layout/confirm.phtml',
-            'machinetest' => 'layout/machinetest.phtml',
-            'imageupload' => 'layout/imageupload.phtml',
-            'macproducers' => 'layout/macproducers.phtml',
-            'machattr'  => 'layout/machattr.phtml',
-            'uniquemachprop' => 'layout/uniquemachprop.phtml',
-            'machpropdef' => 'layout/machpropdef.phtml',
-            'machctg' => 'layout/machctg.phtml',
-            'machprop' => 'layout/machprop.phtml',
-            'mach' => 'layout/mach.phtml',
-            'machins' => 'layout/machinsert.phtml',
-            'cmpins' => 'layout/cmpinsert.phtml',
-                        ),
-        'Companies' => array(
-            'companyregistration' => 'layout/companyregistrationLayout.phtml',
-            'meeting' => 'layout/meetingLayout.phtml',
-                        ),
-        'Supervisor' => array(
-            'coreg' => 'layout/coregLayout.phtml',
-            'machinepark' => 'layout/machineparkLayout.phtml',
-            'software' => 'layout/softwareLayout.phtml',
-            'ureg' => 'layout/uregLayout.phtml',
-            'umonitoring' => 'layout/umonitoringLayout.phtml',
-            'cevaluation' => 'layout/cevaluationLayout.phtml',
-                        ),
-        'Signup' => array(
-            'signup' => 'layout/signup.phtml',
-                        ),
         'Sanalfabrika' => array(
             'registration' => 'layout/registrationLayout.phtml',
             'login' => 'layout/loginLayout.phtml',
@@ -94,9 +56,6 @@ return array(
             'signupconfirmation' => 'layout/signupconfirmationLayout.phtml',
             'index' => 'layout/sanalfabrika.phtml'
         ),
-//        'Uretimosb' => array(
-//            'index' => 'layout/uretimosb.phtml'
-//        ),
         'Admin' => array( 'index' => 'layout/admin.phtml',
                           'menu' => 'layout/menu.phtml',
                           'machctg' => 'layout/machctg2.phtml',
@@ -130,11 +89,6 @@ return array(
                           'clusters' => 'layout/clusters.phtml',
                           'clusteremp' => 'layout/clusteremp.phtml',
                         ),
-        'Cluster' => array(
-            'index' => 'layout/cluster.phtml',
-            'cmpins' => 'layout/cmpinsert2.phtml',
-            'machins' => 'layout/machinsert2.phtml',
-                        ),
         'Error' => array(
             'index' => 'layout/401layout.phtml',
                         ),
@@ -143,7 +97,7 @@ return array(
         'config' => array(
             'class' => 'Zend\Session\Config\SessionConfig',     
             'options' => array(
-                'name' => 'ostim',    
+                'name' => 'dev',    
             ),
         ),
         'savehandler' => array(
@@ -163,7 +117,7 @@ return array(
     ),
     'dbAdapterPostgre' => array(
         'driver'    => 'Pdo',    
-        'dsn'       => "pgsql:host=localhost;dbname=ostim_development",
+        'dsn'       => "pgsql:host=localhost;dbname=development",
         'username'  => 'postgres',
         'password'  => '1Qaaal123',          
     ),
@@ -176,12 +130,7 @@ return array(
     ),
     'ControlorsTobeAuthenticated' => array(
         'Admin',
-        'SFDM',
-        'Supervisor',
-        'Companies',
         'Sanalfabrika',
-        'Cluster'
-
     ),
     'ActionsTobeAuthenticated' => array(
         'Sanalfabrika' => array(
