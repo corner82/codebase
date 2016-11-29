@@ -22,7 +22,7 @@ return array(
        'Error' => 'layout/error.phtml',
        
        
-       'Signup' => 'layout/signup.phtml',
+       
        
 //       'Uretimosb' => 'layout/uretimosb.phtml'
    ),
