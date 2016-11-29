@@ -16,11 +16,11 @@ return array(
        'Application' => 'layout/layout.phtml',
        'Admin' => 'layout/admin.phtml',      
        'Login' => 'layout/login.phtml',
-       'SFDM' => 'layout/sfdm.phtml',
+       
        'Sanalfabrika' => 'layout/sanalfabrika.phtml',
-       'Companies' => 'layout/companies.phtml',
+       
        'Error' => 'layout/error.phtml',
-       'Definitions' => 'layout/definitions.phtml',
+       
        'Supervisor' => 'layout/supervisor.phtml',
        'Signup' => 'layout/signup.phtml',
        'Cluster' => 'layout/cluster.phtml',
