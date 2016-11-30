@@ -918,7 +918,7 @@ class SanalfabrikaController extends AbstractActionController {
                      * @author Mustafa Zeynel Dağlı
                      * @since 17/03/2016
                      */
-                    $this->getServiceLocator()->get('serviceLoginLogRabbitMQ');
+                    //$this->getServiceLocator()->get('serviceLoginLogRabbitMQ');
 
                     /**
                      * redirecting after success
