@@ -284,6 +284,21 @@ namespace Admin;
           ->get('serviceTranslator');
     }
     
+    public function authControl(MvcEvent $e) {
+        //print_r('--dispatch event authControl--');
+        /* 
+         * sessionManager servis çağırılıyor
+         */ 
+        $serviceManager = $e->getApplication()->getServiceManager();
+        
+        
+        // if auth control will be made block
+        if($serviceManager->get('authenticationControlerLocator')) {
+            // calling auth service and makes auth control inside service
+            $serviceManager->get('serviceAuthenticate');
+        } 
+    }
+    
     public function sessionExpireControl(MvcEvent $e) { 
         $serviceManager = $e->getApplication()->getServiceManager();
         $sessionManager = $serviceManager ->get('SessionManagerDefault');
