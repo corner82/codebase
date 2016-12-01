@@ -167,29 +167,6 @@
      }
      
      /**
-      * unique machine property admin operations
-      * @return ViewModel
-      * @author Mustafa Zeynel Dağlı
-      * @since 03/06/2016
-      */
-     public function uniquemachpropAction()
-     {
-         $langCode = $this->getServiceLocator()
-                            ->get('serviceTranslator');
-        $requestUriRegulated = $this->getServiceLocator()
-                            ->get('serviceTranslatorUrlRegulator');
-        $publicKey = $this->getServiceLocator()
-                            ->get('servicePublicKeyReader'); 
-         
-        $view = new ViewModel(array(
-            'requestUriRegulated' => $requestUriRegulated,
-            'langCode' => $langCode,
-            'publicKey' => $publicKey,
-        ));
-        return $view;
-     }
-     
-     /**
       * resources action page for ACL operations
       * @return ViewModel
       * @author Mustafa Zeynel Dağlı
