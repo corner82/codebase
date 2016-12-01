@@ -120,29 +120,6 @@
      }
      
      /**
-      * machine  admin operations
-      * @return ViewModel
-      * @author Mustafa Zeynel Dağlı
-      * @since 31/03/2016
-      */
-     public function machAction()
-     {
-         $langCode = $this->getServiceLocator()
-                            ->get('serviceTranslator');
-        $requestUriRegulated = $this->getServiceLocator()
-                            ->get('serviceTranslatorUrlRegulator');
-        $publicKey = $this->getServiceLocator()
-                            ->get('servicePublicKeyReader'); 
-         
-        $view = new ViewModel(array(
-            'requestUriRegulated' => $requestUriRegulated,
-            'langCode' => $langCode,
-            'publicKey' => $publicKey,
-        ));
-        return $view;
-     }
-     
-     /**
       * system units definitions admin panel
       * @return ViewModel
       * @author Mustafa Zeynel Dağlı
