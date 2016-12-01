@@ -397,29 +397,6 @@
      }
      
      /**
-      * action to attach role and assignments on interface
-      * @return ViewModel
-      * @author Mustafa Zeynel Dağlı
-      * @since 01/08/2016
-      */
-     public function assignroleAction()
-     {
-        $langCode = $this->getServiceLocator()
-                         ->get('serviceTranslator');
-        $requestUriRegulated = $this->getServiceLocator()
-                                    ->get('serviceTranslatorUrlRegulator');
-        $publicKey = $this->getServiceLocator()
-                          ->get('servicePublicKeyReader'); 
-         
-        $view = new ViewModel(array(
-            'requestUriRegulated' => $requestUriRegulated,
-            'langCode'            => $langCode,
-            'publicKey'           => $publicKey,
-        ));
-        return $view;
-     }
-     
-     /**
       * action for operation types definitions
       * @return ViewModel
       * @author Mustafa Zeynel Dağlı
