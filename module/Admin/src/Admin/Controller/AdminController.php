@@ -394,30 +394,7 @@
         ));
         return $view;
      }
-     
-     /**
-      * Consultants define, active, passive and delete operations page
-      * @return ViewModel
-      * @author Mustafa Zeynel Dağlı
-      * @since 09/08/2016
-      */
-     public function consultantsAction()
-     {
-        $langCode = $this->getServiceLocator()
-                         ->get('serviceTranslator');
-        $requestUriRegulated = $this->getServiceLocator()
-                                    ->get('serviceTranslatorUrlRegulator');
-        $publicKey = $this->getServiceLocator()
-                          ->get('servicePublicKeyReader'); 
-         
-        $view = new ViewModel(array(
-            'requestUriRegulated' => $requestUriRegulated,
-            'langCode'            => $langCode,
-            'publicKey'           => $publicKey,
-        ));
-        return $view; 
-     }
-     
+          
      /**
       * admin page to create connection with action resource, privilege
       * and rest services
