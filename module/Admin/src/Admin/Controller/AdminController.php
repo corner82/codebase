@@ -49,29 +49,6 @@
         return $view;
      }
      
-     /**
-      * machine categories admin operations
-      * @return ViewModel
-      * @author Mustafa Zeynel Dağlı
-      * @since 30/03/2016
-      */
-     public function machctgAction()
-     {
-         $langCode = $this->getServiceLocator()
-                            ->get('serviceTranslator');
-        $requestUriRegulated = $this->getServiceLocator()
-                            ->get('serviceTranslatorUrlRegulator');
-        $publicKey = $this->getServiceLocator()
-                            ->get('servicePublicKeyReader'); 
-         
-        $view = new ViewModel(array(
-            'requestUriRegulated' => $requestUriRegulated,
-            'langCode' => $langCode,
-            'publicKey' => $publicKey,
-        ));
-        return $view;
-     }
-          
      
      /**
       * system units definitions admin panel
