@@ -96,28 +96,6 @@
         return $view;
      }
      
-     /**
-      * machine property  admin crud operations
-      * @return ViewModel
-      * @author Mustafa Zeynel Dağlı
-      * @since 23/06/2016
-      */
-     public function machpropdefAction()
-     {
-        $langCode = $this->getServiceLocator()
-                         ->get('serviceTranslator');
-        $requestUriRegulated = $this->getServiceLocator()
-                                    ->get('serviceTranslatorUrlRegulator');
-        $publicKey = $this->getServiceLocator()
-                          ->get('servicePublicKeyReader'); 
-         
-        $view = new ViewModel(array(
-            'requestUriRegulated' => $requestUriRegulated,
-            'langCode'            => $langCode,
-            'publicKey'           => $publicKey,
-        ));
-        return $view;
-     }
      
      /**
       * system units definitions admin panel
