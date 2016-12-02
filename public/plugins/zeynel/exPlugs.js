@@ -38,8 +38,8 @@
     /*setTimeout(function(){
         
         var $textAndPic = $('<div></div>');
-        $textAndPic.append('<img src="https://zeynel.uretimosb.com/dist/img/ostim_logo_en.png" />');
-        $textAndPic.append('<img src="https://zeynel.uretimosb.com/onyuz/standard/assets/img/logo1-default.png" />');
+        $textAndPic.append('<img src="https://zeynel.trf.com/dist/img/ostim_logo_en.png" />');
+        $textAndPic.append('<img src="https://zeynel.trf.com/onyuz/standard/assets/img/logo1-default.png" />');
         $textAndPic.append('<h3>Sayfa Oturum Süreniz Sonlanmıştır, Lütfen Sisteme Tekrar Giriş Yapınız</h3>');
         
         
@@ -182,7 +182,7 @@
             pk: null,
             page: null,
             service: null,
-            proxy: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+            proxy: 'https://proxy.trf.com/SlimProxyBoot.php',
             errorInfo: null,
             errorUrl: null
         },
@@ -452,7 +452,7 @@
          * @returns {null}
          */
         options: {
-            proxy: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+            proxy: 'https://proxy.trf.com/SlimProxyBoot.php',
             url: null,
             pk: null,
             ajaxParams: null,
@@ -838,7 +838,7 @@
          * @returns {null}
          */
         options: {
-            proxy: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+            proxy: 'https://proxy.trf.com/SlimProxyBoot.php',
             url: 'pkFillUsersFirmMachineProperties_infoFirmMachineTool',
             pk: $("#pk").val(),
             ajaxParams: null,
@@ -878,7 +878,7 @@
         _getServiceForAlpacaForm : function() {
             self = this;
             $.ajax({
-                url: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+                url: 'https://proxy.trf.com/SlimProxyBoot.php',
                 data: {
                     /*
                      * Get selected machine tool information from system service name comes here
@@ -955,7 +955,7 @@
             errorCode: null,
             page: null,
             service: null,
-            proxy: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+            proxy: 'https://proxy.trf.com/SlimProxyBoot.php',
             errorInfo: null,
             errorUrl: null,
             type : 'GET',
@@ -1024,7 +1024,7 @@
             errorCode: null,
             page: null,
             service: null,
-            proxy: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+            proxy: 'https://proxy.trf.com/SlimProxyBoot.php',
             errorInfo: null,
             errorUrl: null,
             type : 'GET',
@@ -1204,7 +1204,7 @@
                 var self = this;
                 
                 var ajaxSubMenu = $(this).ajaxCallWidget({
-                    proxy : 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+                    proxy : 'https://proxy.trf.com/SlimProxyBoot.php',
                             data: { url:'pkGetLeftMenu_leftnavigation' ,
                                     parent: id,
                                     pk: $("#pk").val(),
@@ -1305,7 +1305,7 @@
             var self = this;
             
             var ajaxACLResources = $(this).ajaxCallWidget({
-                proxy : 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+                proxy : 'https://proxy.trf.com/SlimProxyBoot.php',
                         data: { url:'pkGetLeftMenu_leftnavigation' ,
                                 parent: 0,
                                 pk: $("#pk").val(),

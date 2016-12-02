@@ -495,8 +495,8 @@ function _init() {
                 if (!$(treeview_id_ref).hasClass('treeview-menu')) {
                     //checks if service has been called before or not...
                     $.ajax({
-                        url: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
-//                        url: 'http://proxy.uretimosb.com:9990/SlimProxyBoot.php',
+                        url: 'https://proxy.trf.com/SlimProxyBoot.php',
+//                        url: 'http://proxy.trf.com:9990/SlimProxyBoot.php',
                         data: {
                             parent: clickedObject_query_id,
                             url: 'pkGetLeftMenu_leftnavigation',

@@ -6,8 +6,8 @@
 //       alert($("#pk").val());
 //      console.log('publicKey is ' + $("#pk").val());
         $.ajax({
-            url: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
-//        url: 'http://proxy.uretimosb.com:9990/SlimProxyBoot.php',
+            url: 'https://proxy.trf.com/SlimProxyBoot.php',
+//        url: 'http://proxy.trf.com:9990/SlimProxyBoot.php',
             data: {
                 parent: 0,
                 pk: $("#pk").val(),

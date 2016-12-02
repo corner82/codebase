@@ -105,7 +105,7 @@
          * @returns {null}
          */
         options: {
-            proxy: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+            proxy: 'https://proxy.trf.com/SlimProxyBoot.php',
             pk: $("#pk").val(),
             ajaxParams: null,
             machineID: null,
@@ -144,7 +144,7 @@
             self = this;
 
             $.ajax({
-                url: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
+                url: 'https://proxy.trf.com/SlimProxyBoot.php',
                 data: {
                     url: self.options.url,
                     pk: $("#pk").val(),
@@ -278,8 +278,8 @@
                 $("#pagination_content").empty();
 
                 $.ajax({
-                    url: 'https://proxy.uretimosb.com/SlimProxyBoot.php',
-                    //                url: 'http://proxy.uretimosb.com:9990/SlimProxyBoot.php',            
+                    url: 'https://proxy.trf.com/SlimProxyBoot.php',
+                    //                url: 'http://proxy.trf.com:9990/SlimProxyBoot.php',            
                     data: {url: window.list_service_url,
                         pk: $('#pk').val(),
                         language_code: $("#langCode").val(),
