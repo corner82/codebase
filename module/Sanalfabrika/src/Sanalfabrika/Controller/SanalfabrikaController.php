@@ -76,8 +76,8 @@ class SanalfabrikaController extends AbstractActionController {
             'requestUriRegulated' => $requestUriRegulated,
             'langCode' => $langCode,
         ));
-        $this->ifLoggedinRedirect();
         $this->authenticate(null, $view);
+        $this->ifLoggedinRedirect();
         return $view;
     }
 
