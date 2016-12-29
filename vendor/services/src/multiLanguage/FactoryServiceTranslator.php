@@ -26,7 +26,15 @@ class FactoryServiceTranslator  implements FactoryInterface{
         $lang = $event->getRouteMatch()
                       ->getParam('lang');
         $lang = trim(strtolower($lang));
-        if($lang == null) $lang = 'tr';
+        
+         /**
+         * changing language  due to browser langugae settings 
+         * @since 28/12/2016
+         * @author Mustafa Zeynel Dağlı
+         */
+        if($lang == null){
+            $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+        }
         
         $translator = $event->getApplication()
                             ->getServiceManager()
