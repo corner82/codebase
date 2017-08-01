@@ -168,6 +168,26 @@
         },
         
         /**
+         * determine if tag cabin has any tags
+         * @param {type} tagAttribute
+         * @returns {Boolean}
+         * @author Mustafa Zeynel Dağlı
+         * @since 30/07/2017
+         */
+        findTagsPlaced : function() {
+            var self = this;
+            var listItems = $(self.options.tagBox).find('li'); 
+            var controler = false;
+            //console.log(listItems);
+            $.each(listItems, function(key, item) {
+                controler = true;
+                return controler;
+            })
+            //console.log(controler);
+            return controler;
+        },
+        
+        /**
          * public function to add tag individually 
          * @param {type} id
          * @param {type} tag
