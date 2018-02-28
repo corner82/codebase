@@ -24,6 +24,35 @@
             tagNotRemovable     : '<li class="tags">{tag}</li>',
             tagContainer        : '.tag-container', 
         },
+        
+        /**
+         * find specific tags due to given value
+         * @param {type} value
+         * @param {type} tagAttribute
+         * @returns {undefined}
+         * @since 01/12/2017
+         */
+        findSpecificTagReadAttr: function (value, tagAttribute, tagAttributeToRead) {
+            //alert('findspecifictags');
+            var self = this;
+            var listItems = $(self.options.tagBox).find('li');
+            var controlor = false;
+            //console.log(listItems);  
+            $.each(listItems, function (key, item) {
+                console.log($(item));
+                if ($(item).attr(tagAttribute) == value) {
+                    //alert('daha önce yüklenmiş');
+                    controlor = $(item).attr(tagAttributeToRead);
+                    return;
+                }
+                //self._trigger('tagsFound', event, item);
+                /*console.log($(item).attr('data-attribute'));
+                console.log($(item).attr('data-tree-item'));*/
+            })
+            //console.log(controlor)
+            return controlor;
+        },
+        
         deleteTag : function() {
             
         },
@@ -41,6 +70,19 @@
         removeAllTags : function() {
             var self = this;
             $(self.options.tagBox).find('li').remove();
+        },
+        
+        /**
+         * control if any tag exists in tag cabin
+         * @returns boolean
+         * @since 14/11/2017
+         */
+        ifTagExists: function () {
+            var self = this;
+            if ($(self.options.tagBox).find('li').length > 0) {
+                return true;
+            }
+            return false;
         },
         
         removeTag : function() {
@@ -263,29 +305,31 @@
          * @param {type} data
          * @param {type} infoArrayManual
          * @returns {undefined}
+        * BugFix#3 01/12/2017
          */
-        addTags : function(data, infoArrayManual) {  
+        addTags: function (data, infoArrayManual) { 
             var self = this;
             var infoArrayManual = infoArrayManual;
             var dataArr = $.parseJSON(data);
             var infoArray = {};
             //console.warn(self.options.tagBox);
-            $.each(dataArr, function(key, row) {
+            $.each(dataArr, function (key, row) {
+                //console.warn(row);
+                //console.warn(row.BatchId);
                 if(typeof self.options.dataMapper!= "undefined") { 
                     $.each(self.options.dataMapper, function(index, item) {
-                        /*console.warn(item);
-                        console.log(index);*/
-                        $.each(item, function(index2, item2) {
-                            //console.warn(row[index][item2]);  
-                            if(typeof row[index][item2]!= "undefined") { 
-                                infoArray['data-'+item2] = row[index][item2]; 
+                        //console.warn(item);
+                        //console.log(index);
+                        $.each(row, function (index2, item2) { // #3
+                            //console.log(jQuery.inArray(index2, infoArrayManual));
+                            if (jQuery.inArray(index2, infoArrayManual)!=-1) {
+                            infoArray['data-' + index2] = item2;
                             }
                         })                    
                     })
                     //console.warn(infoArray);
                 } 
-                self._addTag(row.id, row.text, infoArray, infoArrayManual);  
-                //self._addTag(row.id, row.text);    
+                self._addTag(row.id, row.text, infoArray, infoArrayManual);     
             })
         },
         
@@ -296,6 +340,7 @@
          * @param {type} infoArray
          * @param {type} infoArrayManual
          * @returns {undefined}
+         * BugFix#2 01/12/2017 
          */
         _addTag : function(id, tag, infoArray, infoArrayManual) {
             var self = this;
@@ -308,12 +353,10 @@
                     //console.error(key+'--'+item);
                     tagCustom += ' '+key+'="'+item+'" ';  
                 })
-            }
-            
-            if(typeof infoArrayManual!= "undefined") { 
-                $.each(infoArrayManual, function(key, item) {
+            } else if (typeof infoArrayManual != "undefined") { //#2
+                $.each(infoArrayManual, function (key, item) {
                     //console.error(key+'--'+item);
-                    tagCustom += ' '+key+'="'+item+'" ';  
+                    tagCustom += ' ' + key + '="' + item + '" ';
                 })
             }
             
